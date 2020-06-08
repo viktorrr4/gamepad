@@ -1,3 +1,14 @@
-body {
-	background-color: white;
+.right-trigger,
+.left-trigger {
+	fill:pink;
+	stroke:#000000;
+}
+.left-stick,
+.right-stick {
+	color:#000000;
+	fill:blue;
+}
+.touch-panel {
+	fill:red;
+	stroke:#000000;
 }
