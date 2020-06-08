@@ -1,2 +1,0 @@
-# gamepad
-serega-site-gamepad
