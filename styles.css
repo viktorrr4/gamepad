@@ -1,14 +1,47 @@
-.right-trigger,
-.left-trigger {
-	fill:pink;
-	stroke:#000000;
-}
+/* .right-trigger,
+.left-trigger,
 .left-stick,
-.right-stick {
-	color:#000000;
-	fill:blue;
-}
+.right-stick,
 .touch-panel {
-	fill:red;
-	stroke:#000000;
+	fill: #cccccc;
+	stroke: #cccccc;
+}
+
+.right-trigger.active,
+.left-trigger.active {
+	fill: pink;
+}
+
+.left-stick.active,
+.right-stick.active {
+	fill: blue;
+}
+
+.touch-panel.active {
+	fill: red;
+} */
+
+
+.gamepad {
+	position: relative;
+	text-align: center;
+}
+
+.gamepad img {
+	max-width: 100%;
+}
+
+.gamepad svg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.element {
+	fill: yellow;
+	fill-opacity: .4;
 }

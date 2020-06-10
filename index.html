@@ -12,16 +12,31 @@
 <body>
 
   <section>
-    <h1>Choose your problem</h1>
-
-    <object data="./gamepad3d.svg" type="image/svg+xml" id="gamepad"></object>
-
-    <br><br><br><br>
-    <hr>
-    <p>Zdorova poconi. Chinite u menya</p>
-    <button style="padding: 20px; font-size: 4rem">HO4U PO4IHITb</button>
+    <h1>Выбери свою поломку</h1>
   </section>
 
+  <div class="gamepad-overlay">
+    <div class="gamepad">
+      <svg viewBox="0 0 1000 1066.6667">
+        <circle class="element cross" cx="217" cy="177" r="108" />
+        <circle class="element button-actions" cx="782" cy="174" r="108" />
+        <circle class="element left-stick" cx="354" cy="298" r="58" />
+        <circle class="element right-stick" cx="645" cy="298" r="58" />
+
+        <path class="element touch"
+          d="M 346.95375,47.916887 V 187.67447 c 0,0 0.34039,21.73731 24.02667,21.58045 23.68628,-0.15686 258.35296,-0.31373 258.35296,-0.31373 0,0 21.33334,-2.5098 21.33334,-22.90196 0,-21.64706 0,-139.607854 0,-139.607854 l -8.15687,-5.647059 -290.82355,1.254902 z">
+        </path>
+
+        <rect class="element button-share" x="299" y="65" rx="12" ry="12" width="30" height="47" />
+        <rect class="element button-options" x="669" y="64" rx="12" ry="12" width="30" height="47" />
+
+        <path class="element charge"
+          d="m 480.92578,962.03906 c 0,0 -6.27344,0.78409 -6.27344,7.0586 l 2.19532,28.54882 c 0,0 6.70244,3.11122 31.85742,3.13672 v 0 c 0.0525,0 0.098,-0 0.15039,-0 0.0517,0 0.0966,0 0.14844,0 v -0 c 25.15498,-0.025 31.85937,-3.13672 31.85937,-3.13672 l 2.19531,-28.54882 c 0,-6.27451 -6.27343,-7.0586 -6.27343,-7.0586 h -27.92188 v 0 h -0.0156 z">
+        </path>
+      </svg>
+      <img src="./original/gamepad-tiny.png" alt="">
+    </div>
+  </div>
 
 
   <script src="index.js"></script>

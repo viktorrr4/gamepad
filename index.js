@@ -1,9 +1,20 @@
 window.onload = () => {
-	const gamepadObject = document.querySelector('#gamepad');
+	// const gamepadObject = document.getElementById('gamepad');
 
-	console.log(gamepadObject)
+	// console.log(gamepadObject)
 
-	const rightStick = gamepadObject.querySelectorAll('.right-stick')
+	// gamepadObject.addEventListener('click', function (event) {
+	// 	if (event.target.nodeName === "path") {
+	// 		let parent = event.target.parentNode;
 
-	console.log(rightStick)
+	// 		parent.querySelectorAll('path').forEach(elem => {
+	// 			elem.classList.toggle('active')
+	// 		})
+
+	// 	}
+	// })
+
+
+
+
 }
