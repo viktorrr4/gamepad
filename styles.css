@@ -1,25 +1,52 @@
-/* .right-trigger,
-.left-trigger,
-.left-stick,
-.right-stick,
-.touch-panel {
-	fill: #cccccc;
-	stroke: #cccccc;
+/* modal */
+.v-modal {}
+
+.modal-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-color: rgba(0 0 0 / .4);
+
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+
+	padding-top: 100px;
+
+	opacity: 0;
+	z-index: -1;
+	transition: all ease .3s;
 }
 
-.right-trigger.active,
-.left-trigger.active {
-	fill: pink;
+.modal-window {
+	transition: all ease .3s;
+	z-index: -1;
+	opacity: 0;
+	padding: 15px;
+	max-width: 600px;
+	min-width: 350px;
+	background-color: #fff;
 }
 
-.left-stick.active,
-.right-stick.active {
-	fill: blue;
+.v-modal.open .modal-overlay,
+.v-modal.open .modal-window {
+	z-index: 100;
+	opacity: 1;
+	transition: all ease .3s;
 }
 
-.touch-panel.active {
-	fill: red;
-} */
+.modal-window p {
+	margin: 0;
+}
+
+.modal-header {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 15px;
+}
+
 
 
 .gamepad {
@@ -42,6 +69,119 @@
 }
 
 .element {
+	fill: transparent;
+	fill-opacity: 0;
+	transition: all ease .3s;
+
+
+	position: relative;
+}
+
+.pulse {
+	fill: red;
+	-webkit-animation-duration: 2s;
+	animation-duration: 2s;
+	-webkit-animation-timing-function: ease;
+	animation-timing-function: ease;
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+}
+
+
+
+.pulse-max {
+	-webkit-animation-name: pulse15;
+	animation-name: pulse15;
+}
+
+.pulse-min {
+	-webkit-animation-name: pulse7;
+	animation-name: pulse7;
+}
+
+@-webkit-keyframes pulse7 {
+	0% {
+		r: 3;
+		fill-opacity: .1;
+	}
+
+	75% {
+		r: 12;
+		fill-opacity: 1;
+	}
+
+	100% {
+		r: 3;
+		fill-opacity: .1;
+	}
+}
+
+@keyframes pulse7 {
+	0% {
+		r: 3;
+		fill-opacity: .1;
+	}
+
+	75% {
+		r: 12;
+		fill-opacity: 1;
+	}
+
+	100% {
+		r: 3;
+		fill-opacity: .1;
+	}
+}
+
+@-webkit-keyframes pulse15 {
+	0% {
+		r: 7;
+		fill-opacity: .1;
+	}
+
+	75% {
+		r: 20;
+		fill-opacity: 1;
+	}
+
+	100% {
+		r: 7;
+		fill-opacity: .1;
+	}
+
+}
+
+@keyframes pulse15 {
+	0% {
+		r: 7;
+		fill-opacity: .1;
+	}
+
+	75% {
+		r: 20;
+		fill-opacity: 1;
+	}
+
+	100% {
+		r: 7;
+		fill-opacity: .1;
+	}
+
+}
+
+
+.element:hover,
+.element:hover.touch,
+.element.active {
 	fill: yellow;
-	fill-opacity: .4;
+	fill-opacity: .3;
+	transition: all ease .3s;
+}
+
+.element:hover+.pulse {
+	fill: transparent;
+	fill-opacity: 0;
+	r: 0;
+	-webkit-animation: 0;
+	animation: 0
 }

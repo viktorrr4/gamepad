@@ -1,45 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-  <link rel="stylesheet" href="styles.css">
-</head>
+  <body>
+    <section>
+      <h1>Выбери свою поломку</h1>
+    </section>
 
-<body>
+    <div class="gamepad-overlay">
+      <div class="gamepad">
+        <svg id="gamepad" viewBox="0 0 1000 1066.6667">
+          <g>
+            <circle
+              class="element cross"
+              cx="217"
+              cy="177"
+              r="108"
+              data-description="Сломалась или западает крестовина?"
+            />
+            <circle class="pulse pulse-max" cx="217" cy="177" r="7" />
+          </g>
+          <g>
+            <circle
+              class="element button-actions"
+              cx="782"
+              cy="174"
+              r="108"
+              data-description="Сломались или западают кнопки?"
+            />
+            <circle class="pulse pulse-max" cx="782" cy="174" r="7" />
+          </g>
+          <g>
+            <circle class="element left-stick" cx="354" cy="298" r="58" />
+            <circle class="pulse pulse-max" cx="354" cy="298" r="7" />
+          </g>
+          <g>
+            <circle class="element button-ps" cx="500" cy="303" r="24" />
+            <circle class="pulse pulse-min" cx="500" cy="303" r="3" />
+          </g>
+          <g>
+            <circle class="element right-stick" cx="645" cy="298" r="58" />
+            <circle class="pulse pulse-max" cx="645" cy="298" r="7" />
+          </g>
 
-  <section>
-    <h1>Выбери свою поломку</h1>
-  </section>
+          <g>
+            <path
+              class="element touch"
+              d="M 346.95375,47.916887 V 187.67447 c 0,0 0.34039,21.73731 24.02667,21.58045 23.68628,-0.15686 258.35296,-0.31373 258.35296,-0.31373 0,0 21.33334,-2.5098 21.33334,-22.90196 0,-21.64706 0,-139.607854 0,-139.607854 l -8.15687,-5.647059 -290.82355,1.254902 z"
+            />
+            <path
+              class="element touch"
+              d="m 356.7146,764.77591 -5.76777,20.85272 -3.10573,54.57201 c 0,0 -3.5494,28.83887 23.0711,28.83887 26.62049,0 282.17722,0.44367 282.17722,0.44367 0,0 21.29639,-3.99307 21.29639,-30.61356 0,-26.6205 -3.10572,-53.68466 -3.10572,-53.68466 l -8.42982,-20.85272 c 0,0 -1.33103,-5.3241 -23.0711,-5.3241 -21.74007,0 -220.06274,-1.33103 -220.06274,-1.33103 0,0 -32.83194,2.66205 -48.36056,2.66205 -15.52862,0 -14.64127,4.43675 -14.64127,4.43675 z"
+            />
+            <circle class="pulse pulse-max" cx="500" cy="120" r="7" />
+          </g>
 
-  <div class="gamepad-overlay">
-    <div class="gamepad">
-      <svg viewBox="0 0 1000 1066.6667">
-        <circle class="element cross" cx="217" cy="177" r="108" />
-        <circle class="element button-actions" cx="782" cy="174" r="108" />
-        <circle class="element left-stick" cx="354" cy="298" r="58" />
-        <circle class="element right-stick" cx="645" cy="298" r="58" />
+          <g>
+            <rect
+              class="element button-share"
+              x="299"
+              y="65"
+              rx="12"
+              ry="12"
+              width="30"
+              height="47"
+            />
+            <circle class="pulse pulse-min" cx="313" cy="85" r="3" />
+          </g>
+          <g>
+            <rect
+              class="element button-options"
+              x="669"
+              y="64"
+              rx="12"
+              ry="12"
+              width="30"
+              height="47"
+            />
+            <circle class="pulse pulse-min" cx="683" cy="85" r="3" />
+          </g>
 
-        <path class="element touch"
-          d="M 346.95375,47.916887 V 187.67447 c 0,0 0.34039,21.73731 24.02667,21.58045 23.68628,-0.15686 258.35296,-0.31373 258.35296,-0.31373 0,0 21.33334,-2.5098 21.33334,-22.90196 0,-21.64706 0,-139.607854 0,-139.607854 l -8.15687,-5.647059 -290.82355,1.254902 z">
-        </path>
+          <g>
+            <path
+              class="element charge"
+              d="m 480.92578,957.03906 c 0,0 -6.27344,0.78409 -6.27344,7.0586 l 2.19532,28.54882 c 0,0 6.70244,3.11122 31.85742,3.13672 v 0 c 0.0525,0 0.098,-0 0.15039,-0 0.0517,0 0.0966,0 0.14844,0 v -0 c 25.15498,-0.025 31.85937,-3.13672 31.85937,-3.13672 l 2.19531,-28.54882 c 0,-6.27451 -6.27343,-7.0586 -6.27343,-7.0586 h -27.92188 v 0 h -0.0156 z"
+            />
+            <circle class="pulse pulse-min" cx="510" cy="979" r="3" />
+          </g>
 
-        <rect class="element button-share" x="299" y="65" rx="12" ry="12" width="30" height="47" />
-        <rect class="element button-options" x="669" y="64" rx="12" ry="12" width="30" height="47" />
-
-        <path class="element charge"
-          d="m 480.92578,962.03906 c 0,0 -6.27344,0.78409 -6.27344,7.0586 l 2.19532,28.54882 c 0,0 6.70244,3.11122 31.85742,3.13672 v 0 c 0.0525,0 0.098,-0 0.15039,-0 0.0517,0 0.0966,0 0.14844,0 v -0 c 25.15498,-0.025 31.85937,-3.13672 31.85937,-3.13672 l 2.19531,-28.54882 c 0,-6.27451 -6.27343,-7.0586 -6.27343,-7.0586 h -27.92188 v 0 h -0.0156 z">
-        </path>
-      </svg>
-      <img src="./original/gamepad-tiny.png" alt="">
+          <g>
+            <path
+              class="element right-bumber"
+              d="m 147.7255,890.21576 7.23017,33.91691 16.14238,63.49484 c 0,0 16.31373,39.21569 43.60785,39.21569 27.29412,0 42.30528,-24.9652 44.86275,-34.50979 2.55746,-9.54459 10.66666,-101.01962 10.66666,-101.01962 l -0.22184,-14.52652 c 0,0 -10.1311,-41.00289 -41.81737,-41.00289 -31.68628,0 -39.21569,-0.62745 -39.21569,-0.62745 0,0 -41.25491,-0.15686 -41.25491,55.05883 z"
+            />
+            <circle class="pulse pulse-max" cx="210" cy="920" r="7" />
+          </g>
+          <g>
+            <path
+              class="element left-bumber"
+              d="m 872.40818,890.42721 -7.23017,33.91691 -16.14238,63.49484 c 0,0 -16.31373,39.21564 -43.60785,39.21564 -27.29412,0 -42.30528,-24.9652 -44.86275,-34.50974 -2.55746,-9.54459 -10.66666,-101.01962 -10.66666,-101.01962 l 0.22184,-14.52652 c 0,0 10.1311,-41.00289 41.81737,-41.00289 31.68628,0 39.21569,-0.62745 39.21569,-0.62745 0,0 41.25491,-0.15686 41.25491,55.05883 z"
+            />
+            <circle class="pulse pulse-max" cx="810" cy="920" r="7" />
+          </g>
+        </svg>
+        <img src="./original/gamepad-tiny.png" alt="" />
+      </div>
     </div>
-  </div>
 
+    <div class="v-modal">
+      <div class="modal-overlay" data-close="true">
+        <div class="modal-window">
+          <div class="modal-header">
+            <p>header</p>
+            <span data-close="true">&times;</span>
+          </div>
+          <div class="modal-body">
+            <p>body</p>
+          </div>
+          <div class="modal-footer">
+            <p>footer</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  <script src="index.js"></script>
-</body>
-
+    <script src="index.js"></script>
+  </body>
 </html>
